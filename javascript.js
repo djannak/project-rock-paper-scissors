@@ -1,5 +1,10 @@
 console.log("hello world, i know you weren't expecting to see me here")
 
+let humanScore = 0
+let computerScore = 0
+
+
+
 function getComputerResult() {
 
     let Choice = Math.floor(Math.random() * 3);
@@ -35,7 +40,22 @@ function getComputerResult() {
     function getHumanChoice() {
 
         let userChoice = prompt("let's play! pick your option.", "rock, paper or scissors?");
-        return userChoice;
-        console.log(userChoice);
 
+        return userChoice.toLowerCase();
+        console.log(userChoice);
     }
+
+
+    //  write function that takes human + 
+    //  computer player choices as arguments +
+    //  plays a single round + 
+    //  increments the round winner’s score + 
+    //  logs a winner announcement.
+
+        // Create a new function - playRound.
+        // Define two parameters for playRound: humanChoice + computerChoice - Use these two parameters to take the human and computer choices as arguments.
+        // Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations.
+        // Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
+        // Increment the humanScore or computerScore variable based on the round winner.
+
+        
