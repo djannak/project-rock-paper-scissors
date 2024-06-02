@@ -1,24 +1,29 @@
 console.log("hello world, i know you weren't expecting to see me here")
 
-let humanScore = 0
-let computerScore = 0
+// ^^ message to test if everything is ok - when something's up, it doesn't show ^^
 
+    function getComputerResult() {
 
+        var computerChoice
+        var result = Math.floor(Math.random() * 3);
 
-function getComputerResult() {
+        switch(result) {
+            case 0:
+            computerChoice = "rock";
+            break;
 
-    let Choice = Math.floor(Math.random() * 3);
-    
-        if (Choice === 0) {
-        return "rock";
-        }
-    
-        else if (Choice === 1) {
-        return "paper";
-        }
-    
-        else (Choice === 2) 
-        return "scissors";
+            case 1:
+            computerChoice = "paper";
+            break;
+            
+            case 2:
+            computerChoice = "scissors";
+            break;
+          }
+
+        console.log(computerChoice);
+        return computerChoice;
+
     }
 
     // get human results 
@@ -39,10 +44,10 @@ function getComputerResult() {
     
     function getHumanChoice() {
 
-        let userChoice = prompt("let's play! pick your option.", "rock, paper or scissors?");
+        let humanChoice = prompt("let's play! pick your option.", "rock, paper or scissors?");
 
-        return userChoice.toLowerCase();
-        console.log(userChoice);
+        console.log(humanChoice);
+        return humanChoice.toLowerCase();
     }
 
 
@@ -57,5 +62,21 @@ function getComputerResult() {
         // Make your function’s humanChoice parameter case-insensitive so that players can input “rock”, “ROCK”, “RocK”, or other variations.
         // Write the code for your playRound function to console.log a string value representing the round winner, such as: “You lose! Paper beats Rock”.
         // Increment the humanScore or computerScore variable based on the round winner.
-
         
+        // example:
+
+        // function playRound(humanChoice, computerChoice) {
+        //     // your code here!
+        //   }
+          
+        //   const humanSelection = getHumanChoice();
+        //   const computerSelection = getComputerChoice();
+          
+        //   playRound(humanSelection, computerSelection);
+          
+    function playRound(humanChoice, computerChoice) {
+
+
+
+    }
+    
