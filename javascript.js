@@ -14,21 +14,22 @@ console.log("hello world, i know you weren't expecting to see me here")
 
         switch(result) {
             case 0:
-            computerChoice = "ROCK";
+            computerChoice = "rock";
             break;
 
             case 1:
-            computerChoice = "PAPER";
+            computerChoice = "paper";
             break;
             
             case 2:
-            computerChoice = "SCISSORS";
+            computerChoice = "scissors";
             break;
           }
 
-          computerChoice = computerChoice.toLowerCase();
-          console.log(computerChoice);
           return computerChoice;
+
+        //   computerChoice = computerChoice.toLowerCase();
+        //   console.log(computerChoice);
         
     }
 
@@ -87,6 +88,8 @@ console.log("hello world, i know you weren't expecting to see me here")
 
         if (humanChoice === computerChoice) {
             console.log("it's a tie baby!");
+            console.log(computerScore);
+            console.log(humanScore);
         }
 
         else if (humanChoice == "rock" && computerChoice == "paper") {
@@ -123,5 +126,23 @@ console.log("hello world, i know you weren't expecting to see me here")
             console.log(computerScore);
             console.log(humanScore);
         }
-    }
+    }    
     
+// will now move forward to step 6 - create playGame function
+
+function playGame() {
+
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+
+if (humanScore > computerScore) {
+    return "humanity has won this time...";
+}
+
+    else 
+    return "technology has won this time...";
+
+}
