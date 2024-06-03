@@ -2,6 +2,11 @@ console.log("hello world, i know you weren't expecting to see me here")
 
 // ^^ message to test if everything is ok - when something's up, it doesn't show ^^
 
+    let computerScore = 0;
+    let humanScore = 0;
+
+// ^^ vars in global scope for the scoring to be applied in the game ^^
+
     function getComputerResult() {
 
         var computerChoice
@@ -9,21 +14,22 @@ console.log("hello world, i know you weren't expecting to see me here")
 
         switch(result) {
             case 0:
-            computerChoice = "rock";
+            computerChoice = "ROCK";
             break;
 
             case 1:
-            computerChoice = "paper";
+            computerChoice = "PAPER";
             break;
             
             case 2:
-            computerChoice = "scissors";
+            computerChoice = "SCISSORS";
             break;
           }
 
-        console.log(computerChoice);
-        return computerChoice;
-
+          computerChoice = computerChoice.toLowerCase();
+          console.log(computerChoice);
+          return computerChoice;
+        
     }
 
     // get human results 
@@ -76,7 +82,46 @@ console.log("hello world, i know you weren't expecting to see me here")
           
     function playRound(humanChoice, computerChoice) {
 
+        humanChoice = getHumanChoice();
+        computerChoice = getComputerResult();
 
+        if (humanChoice === computerChoice) {
+            console.log("it's a tie baby!");
+        }
 
+        else if (humanChoice == "rock" && computerChoice == "paper") {
+            computerScore++;
+            console.log("you lost this time!");
+            console.log(computerScore);
+            console.log(humanScore);
+        }
+
+        else if (humanChoice == "rock" && computerChoice == "scissors") {
+            humanScore++;
+            console.log("you're a winner baby!");
+            console.log(computerScore);
+            console.log(humanScore);
+        }
+
+        else if (humanChoice == "paper" && computerChoice == "rock") {
+            humanScore++;
+            console.log("you're a winner baby!");
+            console.log(computerScore);
+            console.log(humanScore);
+        }
+
+        else if (humanChoice == "paper" && computerChoice == "scissors") {
+            computerScore++;
+            console.log("you lost this time!");
+            console.log(computerScore);
+            console.log(humanScore);
+        }
+
+        else if (humanChoice == "scissors" && computerChoice == "rock") {
+            humanScore++;
+            console.log("you're a winner baby!");
+            console.log(computerScore);
+            console.log(humanScore);
+        }
     }
     
