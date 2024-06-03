@@ -139,10 +139,16 @@ function playGame() {
     playRound();
 
 if (humanScore > computerScore) {
-    return "humanity has won this time...";
+    console.log("humanity has won this time...");
 }
 
-    else 
-    return "technology has won this time...";
-
+    else if (humanScore === computerScore) {
+    console.log("it's a draw... how exciting.");
 }
+
+else
+    console.log("technology has won this time...")
+}
+
+
+playGame();
